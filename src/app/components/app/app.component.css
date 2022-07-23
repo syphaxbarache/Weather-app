@@ -85,6 +85,7 @@ main{
 
 /******** right ************/
 .right{
+    position: relative;
     width: 78vw;
     height: 100vh;
     background: #100E1D;
@@ -261,4 +262,18 @@ main{
         height: 200vh;
         width: 100vw;
     }
+}
+footer{
+}
+footer p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #A09FB1;
 }
