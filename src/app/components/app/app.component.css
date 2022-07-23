@@ -1,0 +1,264 @@
+main{
+    display: flex;
+}
+.left{
+    width: 280px;
+    height: 100vh;
+    background: #1E213A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.left .position{
+    display: flex;
+    justify-content: space-around;
+}
+.left img{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.left .image-climat{
+    width: 100%;
+    height: 30%;
+}
+.left .image-climat img{
+    width: 100%;
+    height: 100%;
+}
+.left .tempirature{
+    display: flex;
+    justify-content: center;
+}
+.left .tempirature h1{
+    display: flex;
+    align-items: flex-end;
+}
+.left .tempirature h1{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 169px;
+    /* identical to box height */
+
+
+    color: #E7E7EB;
+}
+.left .tempirature span{
+    font-size:60px;
+}
+.left .climat {
+}
+.left .climat h3{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #A09FB1;
+}
+.left .date-position{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #88869D;
+}
+
+@media screen and (max-width: 400px) {
+    .left{
+        width: 100vw;
+    }
+    
+}
+
+/******** right ************/
+.right{
+    width: 78vw;
+    height: 100vh;
+    background: #100E1D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.right .C-F{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+.right .C-F div{
+    margin-left: 13px;
+    background: #E7E7EB;
+    border-radius: 54px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.right .C-F div.selectionner{
+    background: #585676;
+}
+.right .climatjours{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.right .climatjour{
+    width: 120px;
+    height: 177px;
+    background: #1E213A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.right .climatjour .temp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right .climatjour img{
+    width: 53.56px;
+    height: 62px;
+}
+.right .climatjour p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #E7E7EB;
+}
+.right .Hightlights{
+    width: 80%;
+}
+.right .Hightlights h1{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #E7E7EB;
+}
+.right .Hightlights .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.right .Hightlights .Wind-status,.right .Hightlights .Humidity{
+    margin-top: 30px;
+    width: 300px;
+    height: 150px;
+    background: #1E213A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.right .Hightlights .Wind-status p,.right .Hightlights .Humidity p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #E7E7EB;
+}
+.right .Hightlights .Wind-status h2,.right .Hightlights .Humidity h2{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    
+    color: #E7E7EB;
+}
+.right .Hightlights .Wind-status h2 span,.right .Hightlights .Humidity h2 span{
+    font-size: 40px;
+}
+.right .Hightlights .Visibility,.right .Hightlights .AirPressure{
+    margin-top: 30px;
+    width: 300px;
+    height: 130px;
+    background: #1E213A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.right .Hightlights .Visibility p,.right .Hightlights .AirPressure p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #E7E7EB;
+}
+.right .Hightlights .Visibility h2,.right .Hightlights .AirPressure h2{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    
+    color: #E7E7EB;
+}
+.right .Hightlights .Visibility span,.right .Hightlights .AirPressure span{
+    font-size: 40px;
+}
+
+@media screen and (max-width:970px) {
+    .right{
+        height: 200vh;
+    }
+    main{
+        background-color: #1E213A;;
+    }
+    .right .climatjour{
+        margin-top:  15px;
+    }
+      
+}
+@media screen and (max-width:600px){
+    main{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .left{
+        height: 100vh;
+        width: 100vw;
+    }
+    .right{
+        height: 200vh;
+        width: 100vw;
+    }
+}

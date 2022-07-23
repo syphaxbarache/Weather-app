@@ -1,0 +1,81 @@
+<main>
+    <div class="left" *ngIf="weatherDataGeo">
+        <div class="position">
+            <input type="text" placeholder="Seach for places" [(ngModel)]="research" (change)="researchWeather()">
+            <img src="../../../assets/images/gps.svg"  alt="" (click)="myposition()">
+        </div>
+        <div class="image-climat">
+            <img [src]="iconday(0)" alt="">
+        </div>
+        <div class="tempirature">
+            <h1>{{(celsius?weatherDataGeo.main.temp :weatherDataGeo.main.temp*33.8)| number: '1.0-0'}}<span>{{celsius?"℃":"℉"}}</span></h1>
+        </div>
+        <div class="climat">
+            <h3>{{weatherDataGeo.weather[0].main}}</h3>
+        </div>
+        <div class="date-position">
+            <div class="date">
+                <p>Today  .  <span> {{datetoday| date: 'EEEE, d MMMM '}}</span></p>
+            </div>
+            <div class="position">
+                <p>{{weatherDataGeo.name }},{{weatherDataGeo.sys.country}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="right" *ngIf="weatherForecasData&&weatherDataGeo">
+        <div class="C-F">
+            <div [ngClass]="{'selectionner':!celsius}" class="Celsius"(click)="changerTypeDegre()">℃</div>
+            <div [ngClass]="{'selectionner':celsius}" class="Fahrenheit" (click)="changerTypeDegre()">℉</div>
+        </div>
+        <div class="climatjours">
+            <div class="climatjour">
+                <p>Tomorrow</p>
+                <img [src]="iconday(1)" alt="">
+                <p class="temp"><span>{{(celsius?weatherForecasData.daily[1].temp.day:weatherForecasData.daily[1].temp.day*33.8) | number: '1.0-0'}}°C</span><span>{{(celsius?weatherForecasData.daily[1].temp.night:weatherForecasData.daily[1].temp.night*33.8) | number: '1.0-0'}}{{celsius?"℃":"℉"}}</span></p>
+            </div>
+            <div class="climatjour">
+                <p>{{nextDay.setDate(datetoday.getDate()+2)| date: 'EEEE, d MMMM '}}</p>
+                <img [src]="iconday(2)" alt="">
+                <p class="temp"><span>{{(celsius?weatherForecasData.daily[2].temp.day:weatherForecasData.daily[2].temp.day*33.8) | number: '1.0-0'}}°C</span><span>{{(celsius?weatherForecasData.daily[2].temp.night:weatherForecasData.daily[2].temp.night*33.8) | number: '1.0-0'}}{{celsius?"℃":"℉"}}</span></p>
+            </div>
+            <div class="climatjour">
+                <p>{{nextDay.setDate(datetoday.getDate()+3)| date: 'EEEE, d MMMM '}}</p>
+                <img [src]="iconday(3)" alt="">
+                <p class="temp"><span>{{(celsius?weatherForecasData.daily[3].temp.day:weatherForecasData.daily[3].temp.day*33.8) | number: '1.0-0'}}°C</span><span>{{(celsius?weatherForecasData.daily[3].temp.night:weatherForecasData.daily[3].temp.night*33.8)| number: '1.0-0'}}{{celsius?"℃":"℉"}}</span></p>
+            </div>
+            <div class="climatjour">
+                <p>{{nextDay.setDate(datetoday.getDate()+4)| date: 'EEEE, d MMMM '}}</p>
+                <img [src]="iconday(4)" alt="">
+                <p class="temp"><span>{{(celsius?weatherForecasData.daily[4].temp.day:weatherForecasData.daily[4].temp.day*33.8 )| number: '1.0-0'}}°C</span><span>{{(celsius?weatherForecasData.daily[4].temp.night:weatherForecasData.daily[4].temp.night*33.8 )| number: '1.0-0'}}{{celsius?"℃":"℉"}}</span></p>
+            </div>
+            <div class="climatjour">
+                <p>{{nextDay.setDate(datetoday.getDate()+5)| date: 'EEEE, d MMMM '}}</p>
+                <img [src]="iconday(5)" alt="">
+                <p class="temp"><span>{{(celsius?weatherForecasData.daily[5].temp.day:weatherForecasData.daily[5].temp.day*33.8) | number: '1.0-0'}}°C</span><span>{{(celsius?weatherForecasData.daily[5].temp.night:weatherForecasData.daily[5].temp.night*33.8) | number: '1.0-0'}}{{celsius?"℃":"℉"}}</span></p>
+            </div>
+        </div>
+        <div class="Hightlights">
+            <h1>Today’s Hightlights </h1>
+          <div class="info">
+            <div class="Wind-status">
+                <p>Wind speed</p>
+                <h2>{{weatherDataGeo.wind.speed*1.609344| number: '1.0-0'}}<span>km/h</span></h2>
+                <p>WSW</p>
+            </div>
+            <div class="Humidity">
+                <p>Humidity</p>
+                <h2>{{weatherDataGeo.main.humidity}}<span>%</span></h2>
+            </div>
+            <div class="Visibility">
+                <p>Visibility</p>
+                <h2>{{weatherDataGeo.visibility}}<span>miles</span></h2>
+            </div>
+            <div class="AirPressure">
+                <p>Air Pressure</p>
+                <h2>{{weatherDataGeo.main.pressure}}<span>mb</span></h2>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+</main>
