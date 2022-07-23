@@ -31,7 +31,7 @@
 
 ## Overview
 
-![screenshot](/weather-app)
+![screenshot](/weather-app.png)
 
 
 
