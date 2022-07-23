@@ -31,7 +31,7 @@
 
 ## Overview
 
-![screenshot](/Country-Quiz.PNG)
+![screenshot](/weather-app)
 
 
 
